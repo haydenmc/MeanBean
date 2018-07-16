@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "es2015",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "target": "es2015"
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "files": [
+        "./src/game.ts"
+    ]
+}

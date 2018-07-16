@@ -1,0 +1,20 @@
+{
+  "name": "meanbean",
+  "version": "0.0.1-alpha0",
+  "description": "A little game that's sorta like Dr.Robotnik's Mean Bean Machine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "run": "npm run build && http-server ./wwwroot"
+  },
+  "author": "Hayden McAfee <hayden@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "ts-loader": "^4.4.2",
+    "typescript": "^2.9.2",
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.0.8"
+  }
+}
