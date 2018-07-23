@@ -1,5 +1,9 @@
 import { GameScene } from "./scenes/GameScene";
 
+export const MeanBeanConfig = {
+    tileSize: 32
+};
+
 const config: GameConfig = {
     title: "MeanBean",
     version: "0.0.1-alpha0",
