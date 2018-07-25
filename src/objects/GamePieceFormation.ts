@@ -28,6 +28,24 @@ export class GamePieceFormation extends Phaser.GameObjects.Container {
                 this.secondaryPiece.x = 1  * MeanBeanConfig.tileSize;
                 this.secondaryPiece.y = 0  * MeanBeanConfig.tileSize;
                 break;
+            case FormationEnum.Vertical:
+                this.primaryPiece.x   = 0  * MeanBeanConfig.tileSize;
+                this.primaryPiece.y   = 0  * MeanBeanConfig.tileSize;
+                this.secondaryPiece.x = 0  * MeanBeanConfig.tileSize;
+                this.secondaryPiece.y = 1  * MeanBeanConfig.tileSize;
+                break;
+            case FormationEnum.HorizontalInvert:
+                this.primaryPiece.x   = 0  * MeanBeanConfig.tileSize;
+                this.primaryPiece.y   = 0  * MeanBeanConfig.tileSize;
+                this.secondaryPiece.x = -1  * MeanBeanConfig.tileSize;
+                this.secondaryPiece.y = 0  * MeanBeanConfig.tileSize;
+                break;
+            case FormationEnum.VerticalInvert:
+                this.primaryPiece.x   =  0  * MeanBeanConfig.tileSize;
+                this.primaryPiece.y   =  0  * MeanBeanConfig.tileSize;
+                this.secondaryPiece.x =  0  * MeanBeanConfig.tileSize;
+                this.secondaryPiece.y = -1  * MeanBeanConfig.tileSize;
+                break;
         }
     }
 
@@ -58,5 +76,22 @@ export class GamePieceFormation extends Phaser.GameObjects.Container {
     public update(): void {
         this.x = this.tileX * MeanBeanConfig.tileSize;
         this.y = this.tileY * MeanBeanConfig.tileSize;
+    }
+
+    public rotateFormation(): void {
+        switch (this.formation) {
+            case FormationEnum.Horizontal:
+                this.formation = FormationEnum.Vertical;
+                break;
+            case FormationEnum.Vertical:
+                this.formation = FormationEnum.HorizontalInvert;
+                break;
+            case FormationEnum.HorizontalInvert:
+                this.formation = FormationEnum.VerticalInvert;
+                break;
+            case FormationEnum.VerticalInvert:
+                this.formation = FormationEnum.Horizontal;
+                break;
+        }
     }
 }

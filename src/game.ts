@@ -1,7 +1,9 @@
 import { GameScene } from "./scenes/GameScene";
 
 export const MeanBeanConfig = {
-    tileSize: 32
+    tileSize: 32,
+    movementKeyHeldDownRepeatMs: 800,
+    downKeyHeldDownRepeatMs: 200
 };
 
 const config: GameConfig = {
